@@ -1,16 +1,16 @@
 makeCacheMatrix <- function(x = matrix()) 
 {
   cachedInv <- NULL 
-  set <- function(userValue = matrix()) 
+  set <- function(input = matrix()) 
   {
-    x <<- userValue 
+    x <<- input
     cachedInv <<- NULL
   }
   
   get <- function() x
-  setInverse <- function(invVal)
+  setInverse <- function(invmat)
   {
-    cachedInv <<- invVal 
+    cachedInv <<- invmat 
     return(cachedInv)
   }
   getInverse  <- function() cachedInv
